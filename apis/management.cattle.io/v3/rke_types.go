@@ -148,6 +148,8 @@ type RKESystemImages struct {
 	KubeRouterCNI string `yaml:"kube_router_cni" json:"kubeRouterCni,omitempty"`
 	// Cilium Image
 	Cilium string `yaml:"cilium" json:"cilium,omitempty"`
+	// Cilium Operator
+	CiliumOperator string `yaml:"cilium_operator" json:"ciliumOperator,omitempty"`
 	// Pod infra container image
 	PodInfraContainer string `yaml:"pod_infra_container" json:"podInfraContainer,omitempty"`
 	// Ingress Controller image
