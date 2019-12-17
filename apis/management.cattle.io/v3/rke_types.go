@@ -146,6 +146,8 @@ type RKESystemImages struct {
 	WeaveCNI string `yaml:"weave_cni" json:"weaveCni,omitempty"`
 	// Kube Router CNI image
 	KubeRouterCNI string `yaml:"kube_router_cni" json:"kubeRouterCni,omitempty"`
+	// Cilium Image
+	Cilium string `yaml:"cilium" json:"cilium,omitempty"`
 	// Pod infra container image
 	PodInfraContainer string `yaml:"pod_infra_container" json:"podInfraContainer,omitempty"`
 	// Ingress Controller image
@@ -373,6 +375,8 @@ type NetworkConfig struct {
 	WeaveNetworkProvider *WeaveNetworkProvider `yaml:"weave_network_provider,omitempty" json:"weaveNetworkProvider,omitempty"`
 	// KubeRouterNetworkProvider
 	KubeRouterNetworkProvider *KubeRouterNetworkProvider `yaml:"kube_router_provider,omitempty" json:"kubeRouterNetworkProvider,omitempty"`
+	// CiliumNetworkProvider
+	CiliumNetworkProvider *CiliumNetworkProvider `yaml:"cilium_network_provider,omitempty" json:"ciliumNetworkProvider,omitempty"`
 	// NodeSelector key pair
 	NodeSelector map[string]string `yaml:"node_selector" json:"nodeSelector,omitempty"`
 }
@@ -538,6 +542,10 @@ type WeaveNetworkProvider struct {
 type KubeRouterNetworkProvider struct {
 	RunServiceProxy *bool `yaml:"run_service_proxy" json:"runServiceProxy,omitempty"`
 	RunFirewall     *bool `yaml:"run_firewall" json:"runFirewall,omitempty"`
+}
+
+type CiliumNetworkProvider struct {
+	// TODO: @iwilltry42 fill with options
 }
 
 type KubernetesServicesOptions struct {
